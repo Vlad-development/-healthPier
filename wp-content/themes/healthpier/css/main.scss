@@ -272,7 +272,7 @@ img {
 .header__elements {
     position: absolute;
     top: -3rem;
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     svg {
         height: 100%;
@@ -1151,4 +1151,8 @@ img {
 
 body .is-layout-flex {
     display: block!important;
+}
+
+.wp-block-buttons.is-content-justification-center {
+    display: flex!important;
 }
