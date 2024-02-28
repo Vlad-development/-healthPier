@@ -1166,12 +1166,13 @@ body .is-layout-flex {
     grid-column-gap: 6.25rem;
     grid-row-gap: 6.25rem;
     max-width: 65rem;
+    margin: auto;
     width: 100%;
     &-card {
         padding: 1.5625rem 2.8125rem;
         min-height: 20rem;
         background: rgb(253, 253, 255);
-        &.indications {
+        &.indication {
             box-shadow: inset 0px 3px 20px 0px rgb(0, 198, 189);
             background: rgb(253, 253, 255);
         }
