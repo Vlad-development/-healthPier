@@ -107,20 +107,38 @@ button:active {
     text-align: center;
 }
 
-.btn-main {
+.btn-main,
+.wp-block-button .wp-block-button__link {
+    width: -moz-max-content;
     width: max-content;
     display: flex;
     cursor: pointer;
     border: none;
-    border-radius: 0.25rem;
-    background: #009A93;
+    border-radius: .25rem;
+    background: #009a93;
     gap: 1rem;
-    color: #FFF;
-    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 500;
     padding: 1rem 2rem;
     align-items: center;
+}
+
+.wp-block-button .wp-block-button__link {
+    position: relative;
+}
+
+.wp-block-button .wp-block-button__link:after {
+    content: "";
+    display: block;
+    background: url(../img/white-arrow.svg) no-repeat center top/cover;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.wp-block-buttons {
+    width: 100%;
 }
 
 .btn {
@@ -977,10 +995,11 @@ img {
         width: 0.875rem;
         height: 0.875rem;
         display: inline-block;
+        margin-right: 0.4375rem;
     }
     strong {
         display: inline-block;
-        margin: 0 0 0.625rem 0.3125rem;
+        margin-bottom: 0.625rem;
     }
 }
 
@@ -1127,5 +1146,5 @@ img {
 }
 
 .wp-block-heading.has-text-align-center {
-    margin: auto;
+    margin: auto auto 1.25rem;
 }
