@@ -80,6 +80,9 @@ foreach ($categories as $category) {
 }
 ?>
 
+
+<?php get_template_part('template-parts/specialists') ?>
+
 </main>
 
 
