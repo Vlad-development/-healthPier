@@ -985,7 +985,8 @@ img {
 }
 
 .newsContent-block>ul li,
-.wp-block-column>ul li {
+.wp-block-column>ul li,
+.indications-card ul li {
     color: rgb(22, 49, 82);
     font-size: 1rem;
     font-weight: 400;
@@ -1004,7 +1005,8 @@ img {
 }
 
 .newsContent-block>ul,
-.wp-block-column>ul {
+.wp-block-column>ul,
+.indications-card ul {
     display: flex;
     flex-direction: column;
     gap: 0.9375rem;
@@ -1155,4 +1157,39 @@ body .is-layout-flex {
 
 .wp-block-buttons.is-content-justification-center {
     display: flex!important;
+}
+
+.indications {
+    padding: 3.75rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6.25rem;
+    grid-row-gap: 6.25rem;
+    max-width: 65rem;
+    width: 100%;
+    &-card {
+        padding: 1.5625rem 2.8125rem;
+        min-height: 20rem;
+        background: rgb(253, 253, 255);
+        &.indications {
+            box-shadow: inset 0px 3px 20px 0px rgb(0, 198, 189);
+            background: rgb(253, 253, 255);
+        }
+        &.contraindications {
+            box-shadow: inset 0px 3px 20px 0px rgb(255, 71, 126);
+        }
+        h3 {
+            color: rgb(35, 81, 137);
+            font-family: CranberryJam;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}
+
+.indications-card.contraindications ul li {
+    &::before {
+        background: url(../img/star_icon_red.svg) no-repeat center top/cover;
+    }
 }

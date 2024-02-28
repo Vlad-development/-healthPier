@@ -1,33 +1,12 @@
-<section class="indications">
-    <div class="container">
-        <div class="indications__wrap">
-            <div class="indications-card">
-                <h3>
-
-                </h3>
-                <ul>
-                    <li>
-
-                    </li>
-                    <li>
-                        
-                    </li>
-                </ul>
+<div class="indications">
+    <?php if( have_rows('blok_informaczii') ): ?>
+            <?php while( have_rows('blok_informaczii') ): the_row(); 
+                $selection = get_sub_field('pokazani');
+                $indications = get_sub_field('indications');
+            ?>
+            <div class="indications-card <?php echo $selection; ?>">
+                <?php echo $indications; ?>
             </div>
-
-            <div class="indications-card contraindications">
-                <h3>
-
-                </h3>
-                <ul>
-                    <li>
-
-                    </li>
-                    <li>
-                        
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
