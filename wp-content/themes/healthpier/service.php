@@ -20,28 +20,63 @@ Template Post Type:  page
         </div>
     </section>
 
-    <section class="pocedure">
-        <div class="container">
-            <h2 class="h2">Лицо</h2>
+    <?php
+// Получаем все категории из таксономии cat_procedure
+$categories = get_terms(array(
+    'taxonomy' => 'cat_procedure',
+    'hide_empty' => false,
+));
 
-            <div class="service__list">
-                <div class="service__item">
-                    <div class="service-card">
-                        <img src="<?php bloginfo('template_directory') ?>/img/service-img.jpg" alt="">
+// Проходим по каждой категории
+foreach ($categories as $category) {
+    // Получаем записи (посты) из текущей категории
+    $posts_query = new WP_Query(array(
+        'post_type' => 'procedure',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'cat_procedure',
+                'field' => 'slug',
+                'terms' => $category->slug,
+            ),
+        ),
+    ));
 
-                        <a href="" class="service-card__link">
-                            RSL - скульптурирование
+    // Если есть записи в текущей категории, выводим секцию
+    if ($posts_query->have_posts()) {
+?>
+        <section class="pocedure">
+            <div class="container">
+                <h2 class="h2"><?php echo esc_html($category->name); ?></h2>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                            <circle cx="30" cy="30" r="29.5" stroke="#235189"/>
-                            <path d="M17.5864 30H42.414M42.414 30L35.8804 23.7931M42.414 30L35.8804 36.2069" stroke="#235189"/>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="pocedure__list">
+                    <?php
+                    // Выводим записи текущей категории
+                    while ($posts_query->have_posts()) {
+                        $posts_query->the_post();
+                    ?>
+                        <div class="pocedure__item">
+                            <a href="<?php the_permalink(); ?>" class="pocedure-card">
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                                <h3><?php the_title(); ?></h3>
+                                <svg width="25.553711" height="13.138916" viewBox="0 0 25.5537 13.1389" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="arrow" d="M0 6.56958L24.8271 6.56958M18.2939 12.7764L24.8271 6.56958L18.2939 0.362549" stroke="#235189" stroke-opacity="1.000000" stroke-width="1.000000" />
+                                </svg>
+                            </a>
+                        </div>
+                    <?php
+                    }
+                    // Сбрасываем запрос
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+<?php
+    }
+}
+?>
+
 </main>
 
 
