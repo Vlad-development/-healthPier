@@ -176,27 +176,38 @@ function my_acf_init() {
             'icon'              => 'edit',
             'keywords'          => array( 'howitworks' ),
         ));
+
+		acf_register_block(array(
+            'name'              => 'indications',
+            'title'             => __('Блок показания'),
+            'description'       => __('Блок где выводиться информация об показаниях и противопоказаниях'),
+            'render_callback'   => 'my_acf_indications_render_callback',
+            'category'          => 'heart',
+            'icon'              => 'edit',
+            'keywords'          => array( 'howitworks' ),
+        ));
+
+		
     }
 }
 
 
 function my_acf_quote_render_callback( $block ) {
-    
-    // convert name ("acf/testimonial") into path friendly slug ("testimonial")
     $slug = str_replace('acf/', '', $block['name']);
-    
-    // include a template part from within the "template-parts/block" folder
     if( file_exists( get_theme_file_path("/template-parts/block/{$slug}.php") ) ) {
         include( get_theme_file_path("/template-parts/block/{$slug}.php") );
     }
 }
 
 function my_acf_howitworks_render_callback( $block ) {
-    
-    // convert name ("acf/testimonial") into path friendly slug ("testimonial")
     $slug = str_replace('acf/', '', $block['name']);
-    
-    // include a template part from within the "template-parts/block" folder
+    if( file_exists( get_theme_file_path("/template-parts/block/{$slug}.php") ) ) {
+        include( get_theme_file_path("/template-parts/block/{$slug}.php") );
+    }
+}
+
+function my_acf_indications_render_callback( $block ) {
+    $slug = str_replace('acf/', '', $block['name']);
     if( file_exists( get_theme_file_path("/template-parts/block/{$slug}.php") ) ) {
         include( get_theme_file_path("/template-parts/block/{$slug}.php") );
     }
