@@ -182,9 +182,9 @@ function my_acf_init() {
             'title'             => __('Блок показания'),
             'description'       => __('Блок где выводиться информация об показаниях и противопоказаниях'),
             'render_callback'   => 'my_acf_indications_render_callback',
-            'category'          => 'heart',
+            'category'          => 'welcome-view-site',
             'icon'              => 'edit',
-            'keywords'          => array( 'howitworks' ),
+            'keywords'          => array( 'indications' ),
         ));
 
 		
