@@ -58,10 +58,13 @@ foreach ($categories as $category) {
                         <div class="pocedure__item">
                             <a href="<?php the_permalink(); ?>" class="pocedure-card">
                                 <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-                                <h3><?php the_title(); ?></h3>
-                                <svg width="25.553711" height="13.138916" viewBox="0 0 25.5537 13.1389" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="arrow" d="M0 6.56958L24.8271 6.56958M18.2939 12.7764L24.8271 6.56958L18.2939 0.362549" stroke="#235189" stroke-opacity="1.000000" stroke-width="1.000000" />
-                                </svg>
+                                <div>
+                                    <h3><?php the_title(); ?></h3>
+                                    <svg width="25.553711" height="13.138916" viewBox="0 0 25.5537 13.1389" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path id="arrow" d="M0 6.56958L24.8271 6.56958M18.2939 12.7764L24.8271 6.56958L18.2939 0.362549" stroke="#235189" stroke-opacity="1.000000" stroke-width="1.000000" />
+                                    </svg>
+                                </div>
+
                             </a>
                         </div>
                     <?php
