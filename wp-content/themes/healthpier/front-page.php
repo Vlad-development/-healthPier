@@ -177,7 +177,7 @@ Template Post Type:  page
                if ($block_counter == 1) {
                   $block_class = 'block-big';
                } else {
-                  $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'mini' : 'block-big';
+                  $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
                }
                   setup_postdata($post); ?>
                   <div class="service__item <?= $block_class; ?>">
