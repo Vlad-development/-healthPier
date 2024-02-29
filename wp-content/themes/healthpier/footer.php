@@ -105,6 +105,9 @@
     </footer>
 </div><!-- #page -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/js/main.js"></script>
+
 <?php wp_footer(); ?>
 
 </body>

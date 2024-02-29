@@ -17,21 +17,32 @@ Template Post Type:  page
                     </h1>
                 </div>
                 <div class="offer-slider">
-                    <div class="offer-slider__slid">
-                        <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
+                    <div class="offer-slider__slid swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
+                        </div>
                     </div>
 
                     <div class="offer-slider__button">
-                        <button type="button" class="btn offer-slider__arrow offer-slider__arrow_prev ">
+                        <button type="button" class="btn offer-slider__arrow offer-slider__arrow_prev swiper-button-prev">
 								<svg xmlns="http://www.w3.org/2000/svg" width="98" height="76" viewBox="0 0 98 76" fill="none">
 									<rect width="98" height="76" fill="#FDFDFF"/>
 									<path d="M56 29L42 38L56 47" stroke="#235189"/>
 								  </svg>
 							</button>
-                        <button type="button" class="btn offer-slider__arrow offer-slider__arrow_next ">
+                        <button type="button" class="btn offer-slider__arrow offer-slider__arrow_next swiper-button-next ">
 								<svg xmlns="http://www.w3.org/2000/svg" width="98" height="76" viewBox="0 0 98 76" fill="none">
 									<rect width="98" height="76" fill="#FDFDFF"/>
 									<path d="M42 47L56 38L42 29" stroke="#235189"/>

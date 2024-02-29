@@ -237,14 +237,6 @@ img {
     &-slider {
         max-width: 66.875rem;
         position: relative;
-        &__slid {
-            img {
-                display: none;
-                &:first-child {
-                    display: block;
-                }
-            }
-        }
         &__button {
             display: flex;
             align-items: center;
