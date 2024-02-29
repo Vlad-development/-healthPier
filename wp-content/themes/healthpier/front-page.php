@@ -175,7 +175,7 @@ Template Post Type:  page
             $block_counter = 1;
             foreach( $featured_posts as $post ): 
                if ($block_counter == 1) {
-                  $block_class = 'block-big';
+                  $block_class = 'mini';
                } else {
                   $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
                }
