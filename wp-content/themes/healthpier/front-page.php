@@ -308,7 +308,7 @@ Template Post Type:  page
                                     <div class="news-card__text">
                                         <?php 
                                         $post_content = get_the_content();
-                                        $trimmed_content = wp_trim_words($post_content, 100, '...');
+                                        $trimmed_content = wp_trim_words($post_content, 50, '...');
                                         echo $trimmed_content;
                                         ?>
                                     </div>
