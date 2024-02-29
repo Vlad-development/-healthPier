@@ -169,13 +169,13 @@ Template Post Type:  page
 
                 <?php
 $featured_posts = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
-if ($featured_posts): ?>
+if ($featured_posts):
+    $index = 1; // Инициализация индекса перед началом цикла
+?>
     <div class="service__list">
-        <?php
-        $index = 1; // Инициализация индекса перед началом цикла
-        foreach ($featured_posts as $post):
+        <?php foreach ($featured_posts as $post):
             setup_postdata($post);
-            $class = ($index == 1 || $index == 4 || ($index - 2) % 3 == 0) ? 'mini' : ''; // Условие для класса .mini
+            $class = ($index == 1 || ($index - 1) % 3 == 0) ? 'mini' : ''; // Условие для класса .mini
         ?>
             <div class="service__item <?php echo $class; ?>">
                 <div class="service-card">
