@@ -454,7 +454,7 @@ img {
         &:nth-child(2n+1) {
             margin: auto auto 5rem;
         }
-        &:nth-child(4) .service-card {
+        &:last-child .service-card {
             margin: -5rem auto 0;
         }
     }
