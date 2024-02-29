@@ -168,34 +168,37 @@ Template Post Type:  page
                 </h2>
 
                 <?php
-$featured_posts = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
-if ($featured_posts):
-    $index = 1; // Инициализация индекса перед началом цикла
-?>
-    <div class="service__list">
-        <?php foreach ($featured_posts as $post):
-            setup_postdata($post);
-            $class = ($index == 1 || ($index - 1) % 3 == 0) ? 'mini' : ''; // Условие для класса .mini
-        ?>
-            <div class="service__item <?php echo $class; ?>">
-                <div class="service-card">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-                    <a href="<?php the_permalink(); ?>" class="service-card__link">
-                        <?php the_title(); ?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                            <circle cx="30" cy="30" r="29.5" stroke="#235189" />
-                            <path d="M17.5864 30H42.414M42.414 30L35.8804 23.7931M42.414 30L35.8804 36.2069" stroke="#235189" />
-                        </svg>
-                    </a>
-                </div>
+         $featured_posts = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
+         if( $featured_posts ): ?>
+            <div class="service__list">
+            <?php 
+            $block_counter = 1;
+            foreach( $featured_posts as $post ): 
+               if ($block_counter == 1) {
+                  $block_class = 'block-big';
+               } else {
+                  $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'mini' : 'block-big';
+               }
+                  setup_postdata($post); ?>
+                  <div class="service__item <?= $block_class; ?>">
+                     <div class="service-card">
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+
+                        <a href="<?php the_permalink(); ?>" class="service-card__link">
+                              <?php the_title();?>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                 <circle cx="30" cy="30" r="29.5" stroke="#235189" />
+                                 <path d="M17.5864 30H42.414M42.414 30L35.8804 23.7931M42.414 30L35.8804 36.2069" stroke="#235189" />
+                              </svg>
+                        </a>
+                     </div>
+                  </div>
+                  <?php $block_counter++; ?>
+            <?php endforeach; ?>
             </div>
             <?php 
-            $index++; // Увеличиваем индекс на 1 с каждой итерацией
-        endforeach; ?>
-    </div>
-    <?php 
-    wp_reset_postdata(); ?>
-<?php endif; ?>
+            wp_reset_postdata(); ?>
+      <?php endif; ?>
 
                 <a href="" class="service__btn btn-more">
                     Смотреть все
