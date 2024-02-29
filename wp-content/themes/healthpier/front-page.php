@@ -171,7 +171,6 @@ Template Post Type:  page
                 <?php
                     $featured_post = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
                     if ($featured_post): ?>
-                        <h3><?php echo esc_html($featured_post->post_title); ?></h3>
 
                         <div class="service__item">
                             <div class="service-card">
@@ -180,7 +179,7 @@ Template Post Type:  page
                                 <?php endif; ?>
 
                                 <a href="<?php echo esc_url(get_permalink($featured_post->ID)); ?>" class="service-card__link">
-                                    <?php echo esc_html($featured_post->post_title); ?>
+                                    <?php the_title($featured_post->ID);?>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                                         <circle cx="30" cy="30" r="29.5" stroke="#235189" />
                                         <path d="M17.5864 30H42.414M42.414 30L35.8804 23.7931M42.414 30L35.8804 36.2069" stroke="#235189" />
