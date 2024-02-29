@@ -235,6 +235,7 @@ img {
         }
     }
     &-slider {
+        overflow: hidden;
         max-width: 66.875rem;
         position: relative;
         &__button {
@@ -245,8 +246,12 @@ img {
             right: 0;
             z-index: 1;
             button {
+                position: static;
                 width: max-content;
                 background: transparent;
+                &::after {
+                    display: none;
+                }
             }
         }
     }
