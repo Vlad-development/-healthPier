@@ -112,170 +112,51 @@ Template Post Type:  page
                 </h2>
 
                 <div class="program__grid">
-                    <div class="program-card">
-                        <h3 class="program-card__title">Экспресс</h3>
+                    <?php 
+                        $args = array(
+                            'numberposts' => -1,
+                            'orderby'     => 'date',
+                            'order'       => 'DESC',
+                            'include'     => array(),
+                            'exclude'     => array(),
+                            'meta_key'    => '',
+                            'meta_value'  =>'',
+                            'post_type'   => 'program',
+                            'suppress_filters' => true, 
+                        );
+                        $posts = get_posts( $args );
+                        foreach($posts as $post) { setup_postdata($post); ?>
+                            <div class="program-card">
+                                <h3 class="program-card__title"><?php the_title();?></h3>
 
-                        <img src="<?php bloginfo('template_directory') ?>/img/program-img.jpg" alt="" class="program-card__img">
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="program-card__img">
 
-                        <div class="program-card__content">
-                            <p>
-                                Экспресс-Детокс программа 3 дня
-                            </p>
+                                <div class="program-card__content">
+                                    <?php the_field('kratkoe_opisanie'); ?>
+                                </div>
 
-                            <ul>
-                                <li>
-                                    Диагностика
-                                </li>
-                                <li>
-                                    3-разовое питание
-                                </li>
-                                <li>
-                                    СПА-программы
-                                </li>
-                                <li>
-                                    Миостимуляция
-                                </li>
-                                <li>
-                                    2 ночи проживания
-                                </li>
-                            </ul>
-                        </div>
+                                <div class="program-card__price">
+                                    <span>Стоимость:</span>
+                                    <span><?php the_field('czena'); ?> ₽</span>
+                                </div>
 
-                        <div class="program-card__price">
-                            <span>Стоимость:</span>
-                            <span>30 000 ₽</span>
-                        </div>
-
-                        <a href="" class="program-card__link btn-main">
-                            Подробнее
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                <g clip-path="url(#clip0_3455_1406)">
-                                    <path d="M7.45298 2.77023L7.453 3.77815L11.9381 3.77817L1.98874 13.7276L2.70147 14.4403L12.6509 4.4909L12.6509 8.97601L13.6588 8.97604L13.6588 2.7702L7.45298 2.77023Z" fill="white" stroke="white"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_3455_1406">
-                                    <rect width="16" height="16" fill="white" transform="translate(0 0.427063)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="program-card">
-                        <h3 class="program-card__title">Экспресс</h3>
-
-                        <img src="<?php bloginfo('template_directory') ?>/img/program-img.jpg" alt="" class="program-card__img">
-
-                        <div class="program-card__content">
-                            <p>
-                                Экспресс-Детокс программа 3 дня
-                            </p>
-
-                            <ul>
-                                <li>
-                                    Диагностика
-                                </li>
-                                <li>
-                                    3-разовое питание
-                                </li>
-                                <li>
-                                    СПА-программы
-                                </li>
-                                <li>
-                                    Миостимуляция
-                                </li>
-                                <li>
-                                    2 ночи проживания
-                                </li>
-                                <li>
-                                    Диагностика
-                                </li>
-                                <li>
-                                    3-разовое питание
-                                </li>
-                                <li>
-                                    СПА-программы
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="program-card__price">
-                            <span>Стоимость:</span>
-                            <span>30 000 ₽</span>
-                        </div>
-
-                        <a href="" class="program-card__link btn-main">
-                            Подробнее
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                <g clip-path="url(#clip0_3455_1406)">
-                                    <path d="M7.45298 2.77023L7.453 3.77815L11.9381 3.77817L1.98874 13.7276L2.70147 14.4403L12.6509 4.4909L12.6509 8.97601L13.6588 8.97604L13.6588 2.7702L7.45298 2.77023Z" fill="white" stroke="white"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_3455_1406">
-                                    <rect width="16" height="16" fill="white" transform="translate(0 0.427063)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="program-card">
-                        <h3 class="program-card__title">Экспресс</h3>
-
-                        <img src="<?php bloginfo('template_directory') ?>/img/program-img.jpg" alt="" class="program-card__img">
-
-                        <div class="program-card__content">
-                            <p>
-                                Экспресс-Детокс программа 3 дня
-                            </p>
-
-                            <ul>
-                                <li>
-                                    Диагностика
-                                </li>
-                                <li>
-                                    3-разовое питание
-                                </li>
-                                <li>
-                                    СПА-программы
-                                </li>
-                                <li>
-                                    Миостимуляция
-                                </li>
-                                <li>
-                                    2 ночи проживания
-                                </li>
-                                <li>
-                                    Диагностика
-                                </li>
-                                <li>
-                                    3-разовое питание
-                                </li>
-                                <li>
-                                    СПА-программы
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="program-card__price">
-                            <span>Стоимость:</span>
-                            <span>30 000 ₽</span>
-                        </div>
-
-                        <a href="" class="program-card__link btn-main">
-                            Подробнее
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                <g clip-path="url(#clip0_3455_1406)">
-                                    <path d="M7.45298 2.77023L7.453 3.77815L11.9381 3.77817L1.98874 13.7276L2.70147 14.4403L12.6509 4.4909L12.6509 8.97601L13.6588 8.97604L13.6588 2.7702L7.45298 2.77023Z" fill="white" stroke="white"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_3455_1406">
-                                    <rect width="16" height="16" fill="white" transform="translate(0 0.427063)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
+                                <a href="<?php the_permalink();?>" class="program-card__link btn-main">
+                                    Подробнее
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                        <g clip-path="url(#clip0_3455_1406)">
+                                            <path d="M7.45298 2.77023L7.453 3.77815L11.9381 3.77817L1.98874 13.7276L2.70147 14.4403L12.6509 4.4909L12.6509 8.97601L13.6588 8.97604L13.6588 2.7702L7.45298 2.77023Z" fill="white" stroke="white"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_3455_1406">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.427063)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        <?php }
+                        wp_reset_postdata();          
+                    ?>
                 </div>
             </div>
         </section>
