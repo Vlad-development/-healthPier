@@ -249,6 +249,7 @@ img {
                 position: static;
                 width: max-content;
                 background: transparent;
+                height: auto;
                 &::after {
                     display: none;
                 }
@@ -1151,11 +1152,11 @@ img {
     margin: auto auto 1.25rem;
 }
 
-body .is-layout-flex {
+body .wp-block-buttons-is-layout-flex {
     display: block!important;
 }
 
-.wp-block-buttons.is-content-justification-center {
+.wp-block-buttons-is-layout-flex.is-content-justification-center {
     display: flex!important;
 }
 
