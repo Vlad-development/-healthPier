@@ -518,4 +518,23 @@
     .has-x-large-font-size {
         font-size: 2rem !important;
     }
+    .pocedure-card div {
+        padding: 0.625rem;
+        min-height: 6.125rem;
+    }
+    .pocedure-card img {
+        height: 8.5rem;
+    }
+    .pocedure__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 1.125rem;
+        margin-top: 1.8125rem;
+    }
+    .pocedure-card h3 {
+        font-size: 0.6875rem;
+    }
+    .pocedure {
+        padding-bottom: 0.125rem;
+    }
 }
