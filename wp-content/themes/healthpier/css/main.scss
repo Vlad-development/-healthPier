@@ -396,6 +396,7 @@
         
         .program {
             padding: 1.875rem 0 2.8125rem;
+            position: relative;
             &__grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -468,8 +469,9 @@
             &-icons {
                 position: absolute;
                 left: 0;
-                bottom: 0;
+                bottom: -60rem;
                 width: 100%;
+                z-index: -1;
             }
         }
         
@@ -546,6 +548,7 @@
         }
         
         .about {
+            position: relative;
             padding: 3.5625rem 0 2.5rem;
             &__left {
                 max-width: 26.875rem;
@@ -596,6 +599,12 @@
                         line-height: 1.375rem;
                     }
                 }
+            }
+            &-icons {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -40rem;
             }
         }
         
