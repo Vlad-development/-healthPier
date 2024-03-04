@@ -220,7 +220,7 @@
         }
         
         .offer {
-            padding: 6.6875rem 0 5rem;
+            padding: 2.6875rem 0 5rem;
             position: relative;
             &__title {
                 h2 {
@@ -248,6 +248,7 @@
                 overflow: hidden;
                 max-width: 66.875rem;
                 position: relative;
+                padding: 4rem 0 0;
                 &__button {
                     display: flex;
                     align-items: center;

@@ -14,41 +14,19 @@ Template Post Type:  page
                 
                 <div class="offer-slider">
                     <div class="offer-slider__slid swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="offer__title">
-                                <h2>
-                                    <span>ОЗДОРОВЛЕНИЕ</span> ПРОГРАММА НА 7 ДНЕЙ
-                                </h2>
-                            </div>
-                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="offer__title">
-                                <h2>
-                                    <span>ОЗДОРОВЛЕНИЕ</span> ПРОГРАММА НА 7 ДНЕЙ
-                                </h2>
-                            </div>
-                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="offer__title">
-                                <h2>
-                                    <span>ОЗДОРОВЛЕНИЕ</span> ПРОГРАММА НА 7 ДНЕЙ
-                                </h2>
-                            </div>
-                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="offer__title">
-                                <h2>
-                                    <span>ОЗДОРОВЛЕНИЕ</span> ПРОГРАММА НА 7 ДНЕЙ
-                                </h2>
-                            </div>
-                            <img src="<?php bloginfo('template_directory') ?>/img/offer-img.jpg" alt="">
-                        </div>
+                        <?php if( have_rows('slajdy') ): ?>
+                                <?php while( have_rows('slajdy') ): the_row(); 
+                                    $text = get_sub_field('tekst');
+                                    $img = get_sub_field('izobrazhenie');
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="offer__title">
+                                        <?php echo $text; ?>
+                                    </div>
+                                    <img src="<?php echo $img; ?>" alt="">
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
 
                     <div class="offer-slider__button">
