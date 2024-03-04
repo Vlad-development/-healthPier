@@ -98,8 +98,9 @@ if ($post_type == 'post') {
     </section>
     <?php
 } else {
-    // Если тип записи отличается от 'post', исключаем вывод блока "article"
+    get_template_part('template-parts/price');
     get_template_part('template-parts/specialists');
+    
 }
 ?>
 
