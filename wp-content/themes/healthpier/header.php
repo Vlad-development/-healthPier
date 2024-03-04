@@ -27,7 +27,41 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	    <header class="header">
+    <div class="mobMenu">
+        <button type="button" class="btn mobMenu__close">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.09668 21.2397L21.012 6.87441" stroke="#009A93" stroke-width="2"/>
+            <path d="M21.5566 20.8574L7.1913 6.94207" stroke="#009A93" stroke-width="2"/>
+            </svg>
+        </button>
+
+        <?php wp_nav_menu( array(
+            'theme_location'  => '',
+            'menu'            => 'Menu 1',
+            'container'       => false,
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'mobMenu__list',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => '',
+        ) ); ?>
+
+        <a href="tel:" class="mobMenu__tel">+7 (812) 362-07-07</a>
+        <div class="mobMenu__adress">
+        г. Ломоносов, наб. Сидоровского канала, 3
+        </div>
+    </div>
+
+
+	<header class="header">
         <div class="container">
             <div class="navigation">
                 <div class="navigation__logo">
@@ -62,7 +96,15 @@
                             <path d="M17.566 3.70799C16.916 3.58042 15.8755 3.19711 15.7455 4.21828C15.6155 5.23944 16.6554 5.11187 17.306 5.23944C21.9876 6.2606 23.5482 7.91962 24.3287 12.387C24.4587 13.0248 24.1987 14.046 25.3693 13.9184C26.2792 13.7909 25.8893 12.8973 26.0192 12.387C26.0192 8.04778 22.2476 4.21887 17.566 3.70799Z" fill="#235189"/>
                             <path d="M17.9553 7.28091C17.4347 7.28091 16.9147 7.28091 16.7847 7.7912C16.5247 8.55722 17.1753 8.68479 17.6953 8.81236C19.6458 9.0681 20.6864 10.0887 20.8164 12.0034C20.9464 12.5143 21.207 12.897 21.7269 12.897C22.5075 12.7694 22.5075 12.131 22.5075 11.6207C22.5075 9.4514 20.1664 7.15394 17.9553 7.28091Z" fill="#235189"/>
                         </svg>
-                            
+                    </button>
+
+                    <button type="button" class="btn btn-mob openMenu">
+                        <svg width="37.000000" height="26.000000" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="Vector 5" d="M1 1L36 1" stroke="#235189" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                            <path id="Vector 7" d="M1 13L36 13" stroke="#235189" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                            <path id="Vector 6" d="M1 25L36 25" stroke="#235189" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                        </svg>
+
                     </button>
 
                     <button type="button" class="navigation__btn btn-main">
