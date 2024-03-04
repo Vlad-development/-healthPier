@@ -31,9 +31,7 @@
         <div class="container">
             <div class="navigation">
                 <div class="navigation__logo">
-                    <a href="">
-                        <img src="<?php bloginfo('template_directory') ?>/img/logo.svg" alt="">
-                    </a>
+                    <?php the_custom_logo();?>
                 </div>
 
                 <div class="navigation__block">

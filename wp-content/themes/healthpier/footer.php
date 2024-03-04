@@ -16,9 +16,7 @@
             <div class="footer__wrap">
                 <div class="footer__left">
                     <div class="footer-logo">
-                        <a href="">
-                            <img src="img/logo.svg" alt="">
-                        </a>
+                       <?php the_custom_logo();?>
                     </div>
 
                 </div>
