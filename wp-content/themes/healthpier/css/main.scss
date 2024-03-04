@@ -1621,3 +1621,12 @@
             display: none;
             background: transparent;
         }
+        
+        .prices {
+            &__block {
+                margin: 2rem auto;
+            }
+            button {
+                margin: 2rem auto 0;
+            }
+        }
