@@ -37,43 +37,25 @@
                 </div>
 
                 <div class="navigation__block">
-                    <ul class="navigation__menu">
-                        <li class="menu-item-has-children">
-                            <a href="">Программы</a>
-
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">Экспресс</a>
-                                </li>
-                                <li>
-                                    <a href="">Оздоровление</a>
-                                </li>
-                                <li>
-                                    <a href="">Очищение</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="">процедуры</a>
-                        </li>
-
-                        <li>
-                            <a href="">Команда</a>
-                        </li>
-
-                        <li>
-                            <a href="">о нас</a>
-                        </li>
-
-                        <li>
-                            <a href="">новости и акции</a>
-                        </li>
-
-                        <li>
-                            <a href="">Контакты</a>
-                        </li>
-                    </ul>
+                    <?php wp_nav_menu( array(
+                        'theme_location'  => '',
+                        'menu'            => 'Menu 1',
+                        'container'       => false,
+                        'container_class' => '',
+                        'container_id'    => '',
+                        'menu_class'      => 'navigation__menu',
+                        'menu_id'         => '',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                        'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+                        'depth'           => 0,
+                        'walker'          => '',
+                    ) ); ?>
+                    
 
                     <button type="button" class="btn btn-mob">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

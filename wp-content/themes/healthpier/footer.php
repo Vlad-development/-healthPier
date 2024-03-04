@@ -25,49 +25,47 @@
                 <div class="footer__right">
                     <div class="footer-block">
                         <div class="footer-block__title">Меню</div>
-                        <ul class="footer-block__menu">
-                            <li>
-                                <a href="">Программы
-                            </a>
-                            </li>
-                            <li>
-                                <a href="">Процедуры
-                            </a>
-                            </li>
-                            <li>
-                                <a href=""> О нас
-                            </a>
-                            </li>
-                            <li>
-                                <a href="">
-                            Новости и акции
-                            </a>
-                            </li>
-                            <li>
-                                <a href=""> Команда
-                            </a>
-                            </li>
-                            <li>
-                                <a href="">  Контакты</a>
-                            </li>
-                        </ul>
+                        <?php wp_nav_menu( array(
+                            'theme_location'  => '',
+                            'menu'            => 'Menu Footer',
+                            'container'       => false,
+                            'container_class' => '',
+                            'container_id'    => '',
+                            'menu_class'      => 'footer-block__menu',
+                            'menu_id'         => '',
+                            'echo'            => true,
+                            'fallback_cb'     => 'wp_page_menu',
+                            'before'          => '',
+                            'after'           => '',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+                            'depth'           => 0,
+                            'walker'          => '',
+                        ) ); ?>
                     </div>
 
                     <div class="footer-block">
                         <div class="footer-block__title">Прораммы</div>
-                        <ul class="footer-block__menu">
-                            <li>
-                                <a href="">Детокс
-                            </a>
-                            </li>
-                            <li>
-                                <a href="">Оздоровление
-                            </a>
-                            </li>
-                            <li>
-                                <a href="">Очищение</a>
-                            </li>
-                        </ul>
+                            <?php wp_nav_menu( array(
+                                'theme_location'  => '',
+                                'menu'            => 'Программы',
+                                'container'       => false,
+                                'container_class' => '',
+                                'container_id'    => '',
+                                'menu_class'      => 'footer-block__menu',
+                                'menu_id'         => '',
+                                'echo'            => true,
+                                'fallback_cb'     => 'wp_page_menu',
+                                'before'          => '',
+                                'after'           => '',
+                                'link_before'     => '',
+                                'link_after'      => '',
+                                'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+                                'depth'           => 0,
+                                'walker'          => '',
+                            ) ); ?>
+                        
                     </div>
 
                     <div class="footer-form">
