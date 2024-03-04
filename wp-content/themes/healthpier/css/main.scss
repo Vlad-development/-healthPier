@@ -615,6 +615,15 @@
                 grid-column-gap: 1.875rem;
                 margin-top: 2.25rem;
                 grid-row-gap: 1.6875rem;
+                &_all {
+                    gap: 1.875rem;
+                    .news-card:nth-child(1) {
+                        grid-row: span 2;
+                    }
+                    .news-card:nth-child(2) {
+                        grid-column: span 1;
+                    }
+                }
             }
             &-card:first-child {
                 grid-row: span 2;
