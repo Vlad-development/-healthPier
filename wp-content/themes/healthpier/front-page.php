@@ -60,10 +60,10 @@ Template Post Type:  page
 
                 <ul class="offer-menu">
                     <li>
-                        <a href=""></a>
+                        <a href="">ОТЕЛЬ</a>
                     </li>
                     <li>
-                        <a href=""></a>
+                        <a href="">РЕСТОРАН</a>
                     </li>
                 </ul>
             </div>
@@ -351,60 +351,61 @@ Template Post Type:  page
         <section class="grafic">
             <div class="container">
                 <h2 class="h2 grafic__title">График заездов</h2>
-
-                <div class="grafic-table">
-                    <div class="grafic-table__head">
-                        <span>Название программы</span>
-                        <span>Длительность</span>
-                        <span>Дни заезда</span>
-                        <span>Примечание</span>
+               <div class="grafic-table-wrap">
+                    <div class="grafic-table">
+                        <div class="grafic-table__head">
+                            <span>Название программы</span>
+                            <span>Длительность</span>
+                            <span>Дни заезда</span>
+                            <span>Примечание</span>
+                        </div>
+                        <div class="grafic-table__content">
+                            <div class="grafic-table__row">
+                                <div class="grafic-table__column">
+                                    Экспресс
+                                </div>
+                                <div class="grafic-table__column">
+                                    3 дня
+                                </div>
+                                <div class="grafic-table__column">
+                                    Пятница - Воскресенье
+                                </div>
+                                <div class="grafic-table__column">
+                                    Еженедельно
+                                </div>
+                            </div>
+                            <div class="grafic-table__row">
+                                <div class="grafic-table__column">
+                                    Экспресс
+                                </div>
+                                <div class="grafic-table__column">
+                                    3 дня
+                                </div>
+                                <div class="grafic-table__column">
+                                    Пятница - Воскресенье
+                                </div>
+                                <div class="grafic-table__column">
+                                    Еженедельно
+                                </div>
+                            </div>
+                            <div class="grafic-table__row">
+                                <div class="grafic-table__column">
+                                    Экспресс
+                                </div>
+                                <div class="grafic-table__column">
+                                    3 дня
+                                </div>
+                                <div class="grafic-table__column">
+                                    Пятница - Воскресенье
+                                </div>
+                                <div class="grafic-table__column">
+                                    Еженедельно
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="grafic-table__content">
-                        <div class="grafic-table__row">
-                            <div class="grafic-table__column">
-                                Экспресс
-                            </div>
-                            <div class="grafic-table__column">
-                                3 дня
-                            </div>
-                            <div class="grafic-table__column">
-                                Пятница - Воскресенье
-                            </div>
-                            <div class="grafic-table__column">
-                                Еженедельно
-                            </div>
-                        </div>
-                        <div class="grafic-table__row">
-                            <div class="grafic-table__column">
-                                Экспресс
-                            </div>
-                            <div class="grafic-table__column">
-                                3 дня
-                            </div>
-                            <div class="grafic-table__column">
-                                Пятница - Воскресенье
-                            </div>
-                            <div class="grafic-table__column">
-                                Еженедельно
-                            </div>
-                        </div>
-                        <div class="grafic-table__row">
-                            <div class="grafic-table__column">
-                                Экспресс
-                            </div>
-                            <div class="grafic-table__column">
-                                3 дня
-                            </div>
-                            <div class="grafic-table__column">
-                                Пятница - Воскресенье
-                            </div>
-                            <div class="grafic-table__column">
-                                Еженедельно
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+              
             </div>
         </section>
 

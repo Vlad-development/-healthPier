@@ -281,9 +281,11 @@ img {
     }
     &-menu {
         position: absolute;
-        right: 0;
+        right: -3rem;
         top: 50%;
-        transform: translateY(-50%) rotate(-180deg);
+        transform: translateY(-50%) rotate(91deg);
+        display: flex;
+        gap: 2rem;
         li a {
             font-size: 0.875rem;
             line-height: 1.125rem;
