@@ -7,7 +7,7 @@ Template Post Type:  page
   
    <?php get_header()?>
    
-    <main class="homePage">
+    <main class="homePage"> 
         <section class="offer"> 
 
             <div class="container">
