@@ -212,6 +212,9 @@
                         a {
                             color: #235189;
                         }
+                        &.active {
+                            display: block;
+                        }
                     }
                     &.menu-item-has-children {
                         position: relative;
