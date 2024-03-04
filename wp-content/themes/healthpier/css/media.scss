@@ -359,6 +359,7 @@
     }
     .service__list {
         margin-top: 1.75rem;
+        gap: 30px;
         flex-direction: column;
     }
     .about__wrap {
@@ -464,6 +465,38 @@
     }
     .btn-mob {
         display: block;
+    }
+    .service__item.mini .service-card {
+        max-width: 255px;
+        width: 100%;
+        margin: 0;
+    }
+    .service__item:nth-child(2n+1),
+    .service__item:last-child .service-card {
+        margin: 0;
+    }
+    .service__item.mini .service-card img {
+        height: 16.75rem;
+    }
+    .service__item {
+        width: 100%;
+    }
+    .service-card__link {
+        gap: 0.9375rem;
+        margin-top: 0.625rem;
+        font-size: 1rem;
+        line-height: 1;
+        svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+    .service-card img {
+        height: 14.875rem;
+    }
+    .service__btn {
+        position: static;
+        margin: 2rem auto 0;
     }
 }
 
