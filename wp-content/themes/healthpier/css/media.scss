@@ -119,6 +119,9 @@
     .newsContent-block h2:after {
         width: 14.75rem;
     }
+    .wp-block-heading.has-text-align-center::after {
+        margin: auto;
+    }
     .specialists-content__title {
         font-size: 1.625rem;
         line-height: 105%;
@@ -498,9 +501,21 @@
         position: static;
         margin: 2rem auto 0;
     }
+    .indications {
+        padding: 2.75rem 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 6.25rem;
+        grid-row-gap: 1.25rem;
+        &-card {
+            padding: 1.5625rem 1.8125rem;
+        }
+    }
+    .newsContent-block>ul li,
+    .wp-block-column>ul li,
+    .indications-card ul li {
+        font-size: 0.875rem;
+    }
+    .has-x-large-font-size {
+        font-size: 2rem !important;
+    }
 }
-
-
-/*320-576px*/
-
-@media screen and (max-width: 576px) {}
