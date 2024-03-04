@@ -7,7 +7,7 @@ Template Post Type:  page
   
    <?php get_header()?>
    
-    <main>
+    <main class="homePage">
         <section class="offer">
 
             <div class="container">
@@ -52,12 +52,20 @@ Template Post Type:  page
                 </div>
 
                 <button type="button" class="offer__btn btn-main">Подробнее
-						<svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
-							<circle cx="15.5" cy="16" r="15" stroke="#FDFDFF"/>
-							<path d="M10.5 15.5L20.5 15.5M20.5 15.5L17.8684 18M20.5 15.5L17.8684 13" stroke="#FDFDFF"/>
-						  </svg>
-					</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                        <circle cx="15.5" cy="16" r="15" stroke="#FDFDFF"/>
+                        <path d="M10.5 15.5L20.5 15.5M20.5 15.5L17.8684 18M20.5 15.5L17.8684 13" stroke="#FDFDFF"/>
+                        </svg>
+                </button>
 
+                <ul class="offer-menu">
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
             </div>
 
         </section>

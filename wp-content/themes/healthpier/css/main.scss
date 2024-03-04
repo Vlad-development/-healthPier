@@ -238,7 +238,7 @@ img {
             max-width: 37.5rem;
             top: -5.1875rem;
             left: 6.25rem;
-            z-index: 1;
+            z-index: 2;
             span {
                 color: #235189;
                 font-size: 4rem;
@@ -278,6 +278,20 @@ img {
     }
     .container {
         position: relative;
+    }
+    &-menu {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(-180deg);
+        li a {
+            font-size: 0.875rem;
+            line-height: 1.125rem;
+            letter-spacing: 0.0262rem;
+            font-family: 'CranberryJam';
+            text-transform: uppercase;
+            color: #235189;
+        }
     }
 }
 
