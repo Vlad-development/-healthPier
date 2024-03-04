@@ -624,6 +624,9 @@
                     .news-card:nth-child(2) {
                         grid-column: span 1;
                     }
+                    .news-card:nth-child(3) {
+                        grid-column: auto;
+                    }
                 }
             }
             &-card:first-child {
