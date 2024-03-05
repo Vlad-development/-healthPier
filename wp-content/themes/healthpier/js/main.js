@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var mobMenu = document.querySelector('.mobMenu');
     var mobMenuCloseBtn = document.querySelector('.mobMenu__close');
     var openMenuBtn = document.querySelector('.openMenu');
-    var mobMenuLinks = document.querySelectorAll('.mobMenu__list li a');
+    var mobMenuLinks = document.querySelectorAll('.mobMenu__list li:not(.menu-item-has-children) a');
 
     function toggleMobMenu() {
         mobMenu.classList.toggle('active');

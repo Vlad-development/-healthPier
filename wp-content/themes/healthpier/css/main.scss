@@ -1696,6 +1696,13 @@ body .wp-block-buttons-is-layout-flex {
             font-weight: 400;
             color: #283C54;
         }
+        .sub-menu {
+            display: none;
+            padding: 1rem;
+            &.active {
+                display: block;
+            }
+        }
     }
     &__tel {
         font-size: 1rem;
