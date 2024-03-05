@@ -54,10 +54,10 @@ Template Post Type:  page
 
                 <ul class="offer-menu">
                     <li>
-                        <a href="">ОТЕЛЬ</a>
+                        <a href="https://pierhouse.ru/" target="_blank">ОТЕЛЬ</a>
                     </li>
                     <li>
-                        <a href="">РЕСТОРАН</a>
+                        <a href="https://pierhouse.ru/restaurant/" target="_blank">РЕСТОРАН</a>
                     </li>
                 </ul>
             </div>
