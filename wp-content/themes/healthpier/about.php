@@ -58,9 +58,9 @@ Template Post Type:  page
             <div class="container">
                 <h2 class="licenses__title h2 text-center">Лицензии </h2>
                 <div class="licenses_grid">
-                    <a href=""><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
-                    <a href=""><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
-                    <a href=""><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
+                    <a href="<?php bloginfo('template_directory') ?>/img/licenses.jpeg"><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
+                    <a href="<?php bloginfo('template_directory') ?>/img/licenses.jpeg"><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
+                    <a href="<?php bloginfo('template_directory') ?>/img/licenses.jpeg"><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
                 </div>
             </div>
         </section>
