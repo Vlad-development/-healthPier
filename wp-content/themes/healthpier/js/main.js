@@ -35,3 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener('click', toggleMobMenu);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var openModal = document.querySelectorAll('.openModal');
+    var openModalBtn = document.querySelector('.modalForm');
+
+    openModal.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            openModalBtn.classList.toggle('active');
+        });
+    });
+});
