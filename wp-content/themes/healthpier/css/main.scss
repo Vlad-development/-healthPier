@@ -1558,6 +1558,10 @@ body .wp-block-buttons-is-layout-flex {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.31);
+    z-index: 22;
+    &.active {
+        display: block;
+    }
     &-block {
         max-width: 37.5rem;
         padding: 1.6875rem 4.8125rem;
