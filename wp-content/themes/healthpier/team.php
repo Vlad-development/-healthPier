@@ -6,7 +6,7 @@ Template Post Type:  page
 ?>
   
    <?php get_header()?>
-    <main>
+    <main> 
         <section class="breadcrumbs">
             <div class="container">
                 <div class="breadcrumbs__block">
