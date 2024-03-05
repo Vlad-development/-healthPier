@@ -11,11 +11,9 @@ Template Post Type:  page
     <section class="breadcrumbs">
         <div class="container">
             <div class="breadcrumbs__block">
-                <a href="">Главная</a>
+                <a href="/">Главная</a>
                 <span></span>
-                <a href="">Новости и акции</a>
-                <span></span>
-                <a href="">Новые программы</a>
+                <a href="#"><?php the_title();?></a>
             </div>
         </div>
     </section>

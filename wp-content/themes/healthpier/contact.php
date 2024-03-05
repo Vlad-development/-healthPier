@@ -7,6 +7,15 @@ Template Post Type:  page
   
    <?php get_header()?>
     <main>
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__block">
+                <a href="/">Главная</a>
+                <span></span>
+                <a href="#"><?php the_title();?></a>
+            </div>
+        </div>
+    </section>
         <section class="aboutPage">
             <div class="container">
                 <div class="aboutPage__wrap">

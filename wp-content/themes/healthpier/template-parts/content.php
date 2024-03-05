@@ -8,6 +8,15 @@
  */
 
 ?>
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__block">
+            <a href="/">Главная</a>
+            <span></span>
+            <a href="#"><?php the_title();?></a>
+        </div>
+    </div>
+</section>
 
 <section class="newsContent">
     <div class="container">

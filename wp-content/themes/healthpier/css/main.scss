@@ -1025,6 +1025,7 @@ img {
             font-size: 0.875rem;
             font-weight: 400;
             border: none;
+            width: 15rem;
         }
     }
     &__bottom {
@@ -1726,4 +1727,8 @@ body .wp-block-buttons-is-layout-flex {
         font-weight: 400;
         color: #283C54;
     }
+}
+
+.wpcf7-spinner {
+    position: absolute;
 }
