@@ -288,7 +288,7 @@ Template Post Type:  page
                                 </p>
                             </li>
                         </ul>
-                        <a href="" class="btn about__btn btn-more">Подробнее
+                        <a href="https://pierhouse.ru/" target="_blank" class="btn about__btn btn-more">Подробнее
                             <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <clipPath id="clip6_49">

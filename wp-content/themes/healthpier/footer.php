@@ -67,24 +67,7 @@
                     </div>
 
                     <div class="footer-form">
-                        <div class="footer-form__title">
-                            Подпишитесь на нашу рассылку
-                        </div>
-                        <div class="footer-form__text">
-                            Мы будем присылать только самое важное, не чаще 1-2 раз в месяц
-                        </div>
-
-                        <div class="footer-form__block">
-                            <input type="text" class="footer-form__field" placeholder="Введите вашу почту">
-
-                            <div class="footer-form__btn btn-main">
-                                <input type="submit" value="Подписаться">
-                                <svg width="100%" height="100%" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <circle id="back" cx="15.500000" cy="15.500000" r="15.000000" stroke="#FDFDFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
-                                    <path id="arrow" d="M10.5 15L20.5 15M17.8682 12.5L20.5 15L17.8682 17.5" stroke="#FDFDFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <?php echo do_shortcode('[contact-form-7 id="e4e58f0" title="Подписка"]'); ?>
                     </div>
 
 
@@ -113,27 +96,7 @@
                 <path d="M21.5566 20.8574L7.1913 6.94207" stroke="#009A93" stroke-width="2"></path>
                 </svg>
             </button>
-            <h2 class="modalForm-block__title">
-                Оставьте свой телефон, и мы вас запишем
-            </h2>
-
-            <div class="modalForm-block__form">
-                <label>
-                    <span>Имя</span>
-                    <input type="text" placeholder="Ирина">
-                </label>
-
-                <label>
-                    <span>Телефон</span>
-                    <input type="text" placeholder="+7 999 555 66 77">
-                </label>
-
-                <div class="modalForm-block__checkbox">
-                    <input type="checkbox">
-                    <span>Я даю согласие на обработку персональных данных</span>
-                </div>
-                <button type="submit" class="btn modalForm-block__btn">Отправить</button>
-            </div>
+            <?php echo do_shortcode('[contact-form-7 id="59c4a51" title="Модальное Окно"]'); ?>
         </div>
     </div>
 </div><!-- #page -->

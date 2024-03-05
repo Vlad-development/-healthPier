@@ -40,9 +40,16 @@ document.addEventListener("DOMContentLoaded", function() {
     var openModal = document.querySelectorAll('.openModal');
     var openModalBtn = document.querySelector('.modalForm');
     var modalBtnCLose = document.querySelector('.modalForm__close');
+    var btnOpenModal = document.querySelectorAll('.wp-block-button .wp-block-button__link');
 
     modalBtnCLose.addEventListener('click', function() {
         openModalBtn.classList.toggle('active');
+    });
+
+    btnOpenModal.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            openModalBtn.classList.toggle('active');
+        });
     });
 
     openModal.forEach(function(btn) {
