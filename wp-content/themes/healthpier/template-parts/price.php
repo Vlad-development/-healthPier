@@ -6,7 +6,7 @@
     <?php the_field('czena'); ?> рублей
 </div>
 
-<button type="button" class="btn-main">
+<button type="button" class="btn-main openModal">
     Записаться
     <svg width="100%" height="100%" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15.5" cy="16" r="15" stroke="#FDFDFF"/>
