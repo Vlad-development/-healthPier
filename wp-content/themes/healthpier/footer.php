@@ -107,6 +107,12 @@
 
     <div class="modalForm">
         <div class="modalForm-block">
+            <button type="button" class="btn modalForm__close">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.09668 21.2397L21.012 6.87441" stroke="#009A93" stroke-width="2"></path>
+                <path d="M21.5566 20.8574L7.1913 6.94207" stroke="#009A93" stroke-width="2"></path>
+                </svg>
+            </button>
             <h2 class="modalForm-block__title">
                 Оставьте свой телефон, и мы вас запишем
             </h2>

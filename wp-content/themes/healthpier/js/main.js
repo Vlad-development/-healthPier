@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     var openModal = document.querySelectorAll('.openModal');
     var openModalBtn = document.querySelector('.modalForm');
+    var modalBtnCLose = document.querySelector('.modalForm__close');
+
+    modalBtnCLose.addEventListener('click', function() {
+        openModalBtn.classList.toggle('active');
+    });
 
     openModal.forEach(function(btn) {
         btn.addEventListener('click', function() {
