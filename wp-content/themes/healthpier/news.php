@@ -27,6 +27,7 @@ Template Post Type:  page
             <?php 
                 $args = array(
                     'numberposts' => 3,
+                    'category'    => 9,
                     'orderby'     => 'date',
                     'order'       => 'DESC',
                     'include'     => array(),
@@ -79,6 +80,7 @@ Template Post Type:  page
             <?php 
                 $args = array(
                     'numberposts' => -1,
+                    'category'    => 8,
                     'orderby'     => 'date',
                     'order'       => 'DESC',
                     'include'     => array(),
