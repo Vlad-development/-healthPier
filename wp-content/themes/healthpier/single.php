@@ -14,11 +14,20 @@ get_header();
 	    <section class="breadcrumbs">
             <div class="container">
                 <div class="breadcrumbs__block">
-                    <a href="">Главная</a>
+                    <a href="/">Главная</a>
                     <span></span>
-                    <a href="">Новости и акции</a>
-                    <span></span>
-                    <a href="">Новые программы</a>
+                    <?php 
+                        $post_type = get_post_type();
+
+                        if ($post_type === 'procedure') {
+                            ?>
+                        
+                                <a href="/proczedury">Процедуры</a>
+                                <span></span>
+                            <?php
+                        }
+                    ?>
+                    <a href=""><?php the_title();?></a>
                 </div>
             </div>
         </section>
