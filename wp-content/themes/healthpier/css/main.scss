@@ -72,7 +72,7 @@ h6 {
     position: relative;
     &::after {
         content: "";
-        width: 8.75rem;
+        width: 10.75rem;
         height: 0.125rem;
         margin: auto;
         display: block;
@@ -956,8 +956,6 @@ img {
     }
     &-logo {
         width: 9.875rem;
-        border: 0.1875rem dotted rgba(22, 49, 82, 0.1);
-        padding: 0.625rem;
         margin-left: 1.875rem;
     }
     &-text {
@@ -1734,5 +1732,5 @@ body .wp-block-buttons-is-layout-flex {
 }
 
 .wpcf7-spinner {
-    position: absolute;
+    position: absolute!important;
 }
