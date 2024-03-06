@@ -47,7 +47,7 @@ Template Post Type:  page
                             <div class="news-card__text">
                                 <?php 
                                 $post_content = get_the_content();
-                                $trimmed_content = wp_trim_words($post_content, 18, '...');
+                                $trimmed_content = wp_trim_words($post_content, 20, '...');
                                 echo $trimmed_content;
                                 ?>
                             </div>
@@ -99,7 +99,7 @@ Template Post Type:  page
                             <div class="news-card__text">
                                 <?php 
                                 $post_content = get_the_content();
-                                $trimmed_content = wp_trim_words($post_content, 18, '...');
+                                $trimmed_content = wp_trim_words($post_content, 20, '...');
                                 echo $trimmed_content;
                                 ?>
                             </div>
