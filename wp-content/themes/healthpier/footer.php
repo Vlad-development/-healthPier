@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="footer-form">
-                        <?php echo do_shortcode('[contact-form-7 id="e4e58f0" title="Подписка"]'); ?>
+                        <?php echo do_shortcode('[contact-form-7 id="8f73d5a" title="Подписка"]'); ?>
                     </div>
 
 
@@ -96,7 +96,7 @@
                 <path d="M21.5566 20.8574L7.1913 6.94207" stroke="#009A93" stroke-width="2"></path>
                 </svg>
             </button>
-            <?php echo do_shortcode('[contact-form-7 id="59c4a51" title="Модальное Окно"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="837c159" title="Модальное Окно"]'); ?>
         </div>
     </div>
 </div><!-- #page -->
