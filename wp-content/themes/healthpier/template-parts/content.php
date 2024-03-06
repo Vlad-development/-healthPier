@@ -8,15 +8,6 @@
  */
 
 ?>
-<section class="breadcrumbs">
-    <div class="container">
-        <div class="breadcrumbs__block">
-            <a href="/">Главная</a>
-            <span></span>
-            <a href="#"><?php the_title();?></a>
-        </div>
-    </div>
-</section>
 
 <section class="newsContent">
     <div class="container">
@@ -56,8 +47,17 @@
                     </li>
                 </ul>
             </div>
-            <h1><?php the_title();?></h1>
-            
+            <h1><span style="text-transform: uppercase;"> <?php the_title();?></span>
+            <?php
+                $acf_field = get_field('podzagolovok');
+
+                if ($acf_field) { ?>
+                     <?php the_field('podzagolovok');?>
+                <?php }
+            ?>
+        
+        </h1>
+           
 
             <?php the_content();?>
         </div>
