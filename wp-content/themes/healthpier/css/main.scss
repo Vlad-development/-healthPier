@@ -134,6 +134,12 @@ button:active {
     align-items: center;
 }
 
+.btn-main:hover,
+.wp-block-button .wp-block-button__link:hover {
+    transform: scale(1.02);
+    box-shadow: 0.25rem 0.5rem 2.5rem 0rem rgba(15, 15, 15, 0.20);
+}
+
 .btn-main svg {
     width: 1.9375rem;
     height: 1.9375rem;
@@ -381,6 +387,12 @@ img {
                 position: absolute;
                 right: 0;
                 bottom: 0;
+                &:hover {
+                    svg path {
+                        stroke-width: 1.5;
+                        stroke: #235189;
+                    }
+                }
             }
         }
         &__img {
@@ -561,6 +573,10 @@ img {
     padding: 1rem 2.4375rem;
     border: 0.0625rem solid rgb(0, 154, 147);
     border-radius: 0.25rem;
+    &:hover {
+        border: 0.1875rem solid var(--green, #009A93);
+        box-shadow: -0.25rem 0.5rem 2.5rem 0rem rgba(0, 154, 147, 0.40);
+    }
 }
 
 .btn-more svg {
