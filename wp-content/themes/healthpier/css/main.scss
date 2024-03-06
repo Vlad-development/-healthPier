@@ -392,6 +392,10 @@ img {
                         stroke-width: 1.5;
                         stroke: #235189;
                     }
+                    svg circle {
+                        stroke-width: 1.5;
+                        stroke: #235189;
+                    }
                 }
             }
         }
@@ -552,6 +556,16 @@ img {
             font-size: 1.25rem;
             font-weight: 500;
             line-height: 150%;
+            &:hover {
+                svg path {
+                    stroke-width: 1.5;
+                    stroke: #235189;
+                }
+                svg circle {
+                    stroke-width: 1.5;
+                    stroke: #235189;
+                }
+            }
         }
     }
     &__btn {
