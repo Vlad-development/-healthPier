@@ -62,11 +62,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    var inputFields = document.querySelectorAll('input[type="text"]');
+    var inputFields = document.querySelectorAll('input[type="text"][placeholder]');
 
     inputFields.forEach(function(inputField) {
         inputField.addEventListener('focus', function() {
             this.removeAttribute('placeholder');
+        });
+
+        inputField.addEventListener('blur', function() {
+            if (!this.value.trim()) {
+                this.setAttribute('placeholder', 'Ирина');
+            }
         });
     });
 });
