@@ -9,14 +9,14 @@ Template Post Type:  page
 
 <main>
 <section class="breadcrumbs">
-        <div class="container">
-            <div class="breadcrumbs__block">
-                <a href="/">Главная</a>
-                <span></span>
-                <a href="#"><?php the_title();?></a>
-            </div>
+    <div class="container">
+        <div class="breadcrumbs__block">
+            <a href="/">Главная</a>
+            <span></span>
+            <a href="#"><?php the_title();?></a>
         </div>
-    </section>
+    </div>
+</section>
 <section class="news">
     <div class="container">
         <h2 class="news__title h2">
