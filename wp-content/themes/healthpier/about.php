@@ -20,12 +20,9 @@ Template Post Type:  page
             <div class="container">
                 <div class="aboutPage__wrap">
                     <div class="aboutPage__block">
-                        <h1 class="h1">О клинике</h1>
+                        <h1 class="h1"><?php the_title();?></h1>
                         <div>
-                            <p>
-                                Клиника для комплексного оздоровления, коррекции веса и омоложения в Ленинградской области на берегу Финского залива вблизи Меншиковского дворца на базе комфортного отеля. Мы имеем медицинскую лицензию и все необходимые сертификаты. С вами работает команда
-                                профессионалов, которая поддерживает вас на каждом этапе пребывания у нас в гостях.
-                            </p>
+                            <?php the_content();?>
 
                             <button type="button" class=" btn-main openModal">Записаться
 
@@ -38,7 +35,7 @@ Template Post Type:  page
                             </button>
                         </div>
                     </div>
-                    <img src="<?php bloginfo('template_directory') ?>/img/about-img.jpg" alt="" class="aboutPage__img">
+                    <img src="<?php the_post_thumbnail_url() ?>" alt="" class="aboutPage__img">
                 </div>
             </div>
         </section>
@@ -46,10 +43,17 @@ Template Post Type:  page
         <section class="gallery">
             <div class="container">
                 <div class="gallery__grid">
-                    <img src="<?php bloginfo('template_directory') ?>/img/about-img.jpg" alt="">
-                    <img src="<?php bloginfo('template_directory') ?>/img/about-img.jpg" alt="">
-                    <img src="<?php bloginfo('template_directory') ?>/img/about-img.jpg" alt="">
-                    <img src="<?php bloginfo('template_directory') ?>/img/about-img.jpg" alt="">
+                    <?php 
+                    $images = get_field('opisanie');
+                    if( $images ): ?>
+        
+                        <?php foreach( $images as $image ): ?>
+                            <a href="<?php echo esc_url($image['url']); ?>">
+                                 <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            </a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </section>
@@ -58,9 +62,13 @@ Template Post Type:  page
             <div class="container">
                 <h2 class="licenses__title h2 text-center">Лицензии </h2>
                 <div class="licenses_grid">
-                    <a href="<?php bloginfo('template_directory') ?>/img/licenses.jpeg"><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
-                    <a href="<?php bloginfo('template_directory') ?>/img/licenses.jpeg"><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
-                    <a href="<?php bloginfo('template_directory') ?>/img/licenses.jpeg"><img src="<?php bloginfo('template_directory') ?>/img/licenses.jpeg" alt=""></a>
+                    <?php while( have_rows('foto') ): the_row(); 
+            			$image = get_sub_field('kartinka');
+            		?>
+            		<a href="<?php echo $image; ?>"><img src="<?php echo $image; ?>" alt=""></a>
+            	   <?php endwhile; ?>
+                    
+                    
                 </div>
             </div>
         </section>

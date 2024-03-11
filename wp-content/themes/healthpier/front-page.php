@@ -18,12 +18,21 @@ Template Post Type:  page
                                 <?php while( have_rows('slajdy') ): the_row(); 
                                     $text = get_sub_field('tekst');
                                     $img = get_sub_field('izobrazhenie');
+                                    $ssylka_na_straniczu = get_sub_field('ssylka_na_straniczu');
+                                    
                                 ?>
                                 <div class="swiper-slide">
                                     <div class="offer__title">
                                         <?php echo $text; ?>
                                     </div>
                                     <img src="<?php echo $img; ?>" alt="">
+
+                                    <a href="<?php echo $ssylka_na_straniczu; ?>" class="offer__btn btn-main">Подробнее
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                                            <circle cx="15.5" cy="16" r="15" stroke="#FDFDFF"/>
+                                            <path d="M10.5 15.5L20.5 15.5M20.5 15.5L17.8684 18M20.5 15.5L17.8684 13" stroke="#FDFDFF"/>
+                                            </svg>
+                                    </a>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -31,26 +40,21 @@ Template Post Type:  page
 
                     <div class="offer-slider__button">
                         <button type="button" class="btn offer-slider__arrow offer-slider__arrow_prev swiper-button-prev">
-								<svg xmlns="http://www.w3.org/2000/svg" width="98" height="76" viewBox="0 0 98 76" fill="none">
-									<rect width="98" height="76" fill="#FDFDFF"/>
-									<path d="M56 29L42 38L56 47" stroke="#235189"/>
-								  </svg>
-							</button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="76" viewBox="0 0 98 76" fill="none">
+                                    <rect width="98" height="76" fill="#FDFDFF"/>
+                                    <path d="M56 29L42 38L56 47" stroke="#235189"/>
+                                  </svg>
+                            </button>
                         <button type="button" class="btn offer-slider__arrow offer-slider__arrow_next swiper-button-next ">
-								<svg xmlns="http://www.w3.org/2000/svg" width="98" height="76" viewBox="0 0 98 76" fill="none">
-									<rect width="98" height="76" fill="#FDFDFF"/>
-									<path d="M42 47L56 38L42 29" stroke="#235189"/>
-								  </svg>
-							</button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="76" viewBox="0 0 98 76" fill="none">
+                                    <rect width="98" height="76" fill="#FDFDFF"/>
+                                    <path d="M42 47L56 38L42 29" stroke="#235189"/>
+                                  </svg>
+                            </button>
                     </div>
                 </div>
 
-                <button type="button" class="offer__btn btn-main">Подробнее
-                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
-                        <circle cx="15.5" cy="16" r="15" stroke="#FDFDFF"/>
-                        <path d="M10.5 15.5L20.5 15.5M20.5 15.5L17.8684 18M20.5 15.5L17.8684 13" stroke="#FDFDFF"/>
-                        </svg>
-                </button>
+                
 
                 <ul class="offer-menu">
                     <li>
@@ -94,13 +98,13 @@ Template Post Type:  page
                 </div>
                 <div class="benefits__wrap">
                     <?php if( have_rows('preimushhestvo') ): ?>
-                    		<?php while( have_rows('preimushhestvo') ): the_row(); 
-                    			$title = get_sub_field('zagolovok');
-                    			$text = get_sub_field('tekst');
-                    			$link = get_sub_field('ssylka');
-                    			$img = get_sub_field('kartinka');
-                    		?>
-                    		<div class="benefits-card">
+                            <?php while( have_rows('preimushhestvo') ): the_row(); 
+                                $title = get_sub_field('zagolovok');
+                                $text = get_sub_field('tekst');
+                                $link = get_sub_field('ssylka');
+                                $img = get_sub_field('kartinka');
+                            ?>
+                            <div class="benefits-card">
                                 <div class="benefits-card__content">
                                     <h2><?php echo $title; ?></h2>
         
@@ -110,16 +114,16 @@ Template Post Type:  page
         
                                     <a href="<?php echo $link; ?>" target="_blank">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-        									<circle cx="30" cy="30" r="29.5" stroke="#235189"/>
-        									<path d="M17.5864 29.9999H42.414M42.414 29.9999L35.8804 23.793M42.414 29.9999L35.8804 36.2068" stroke="#235189"/>
-        								  </svg>
+                                            <circle cx="30" cy="30" r="29.5" stroke="#235189"/>
+                                            <path d="M17.5864 29.9999H42.414M42.414 29.9999L35.8804 23.793M42.414 29.9999L35.8804 36.2068" stroke="#235189"/>
+                                          </svg>
                                     </a>
                                 </div>
                                 <div class="benefits-card__img">
                                     <img src="<?php echo $img; ?>" alt="">
                                 </div>
                             </div>
-                    	   <?php endwhile; ?>
+                           <?php endwhile; ?>
                     <?php endif; ?>
 
                 </div>
@@ -253,40 +257,27 @@ Template Post Type:  page
             <div class="container">
                 <div class="about__wrap">
                     <div class="about__left">
-                        <h2 class="h2">Об отеле</h2>
-                        <p>Отель расположен на южном побережье Финского залива в одном из красивейших мест Ленинградской области - Ораниенбауме. Есть удобная парковка. Недалеко от отеля находится пляж.</p>
-                        <img src="<?php bloginfo('template_directory') ?>/img/about-img.jpg" alt="">
+                        <h2 class="h2"><?php the_field('about_zagolovok'); ?></h2>
+                        <p><?php the_field('about_tekst'); ?></p>
+                        <img src="<?php the_field('about_kartinka'); ?>" alt="">
                     </div>
                     <div class="about__right">
                         <ul class="about-list">
-                            <li>
-                                <img src="<?php bloginfo('template_directory') ?>/img/icon-kitchen.svg" alt="">
-                                <h3>Изысканная кухня</h3>
+                            <?php while( have_rows('informaczionnye_bloki') ): the_row(); 
+                    			$ikonka = get_sub_field('ikonka');
+                    			$zagolovok = get_sub_field('zagolovok');
+                    			$teks = get_sub_field('teks');
+                    		?>
+                    		<li>
+                                <img src="<?php echo $ikonka; ?>" alt="">
+                                <h3><?php echo $zagolovok; ?></h3>
                                 <p>
-                                    Сбалансированное вкусное меню от нашего шеф-повара
+                                   <?php echo $teks; ?>
                                 </p>
                             </li>
-                            <li>
-                                <img src="<?php bloginfo('template_directory') ?>/img/icon-relax.svg" alt="">
-                                <h3>Комфортный отдых</h3>
-                                <p>
-                                    После процедур вы можете провести время по своему вкусу
-                                </p>
-                            </li>
-                            <li>
-                                <img src="<?php bloginfo('template_directory') ?>/img/icon-comfort.svg" alt="">
-                                <h3>Полный комфорт</h3>
-                                <p>
-                                    Удобные номера с большими кроватями
-                                </p>
-                            </li>
-                            <li>
-                                <img src="<?php bloginfo('template_directory') ?>/img/icon-accompanying.svg" alt="">
-                                <h3>Сопровождение врачей</h3>
-                                <p>
-                                    Наши доктора консультируют и сопровождают
-                                </p>
-                            </li>
+                    	   <?php endwhile; ?>
+                            
+                           
                         </ul>
                         <a href="https://pierhouse.ru/" target="_blank" class="btn about__btn btn-more">Подробнее
                             <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -339,7 +330,7 @@ Template Post Type:  page
                         );
                         $posts = get_posts( $args );
                         foreach($posts as $post) { setup_postdata($post); ?>
-                            <div class="news-card">
+                            <a href="<?php the_permalink();?>" class="news-card">
                                 <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="news-card__img">
                                 <div class="news-card__block">
                                     <h2 class="news-card__title">
@@ -361,7 +352,7 @@ Template Post Type:  page
                                         </svg>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
                         <?php }
                         wp_reset_postdata();          
@@ -381,48 +372,29 @@ Template Post Type:  page
                             <span>Примечание</span>
                         </div>
                         <div class="grafic-table__content">
-                            <div class="grafic-table__row">
-                                <div class="grafic-table__column">
-                                    Экспресс
+                            <?php while( have_rows('grafik') ): the_row(); 
+                                    $nazvanie_programmy = get_sub_field('nazvanie_programmy');
+                                    $dlitelnost = get_sub_field('dlitelnost');
+                                    $dni_zaezda = get_sub_field('dni_zaezda');
+                                    $primechanie = get_sub_field('primechanie');
+                                ?>
+                                <div class="grafic-table__row">
+                                    <div class="grafic-table__column">
+                                       <?php echo $nazvanie_programmy; ?>
+                                    </div>
+                                    <div class="grafic-table__column">
+                                        <?php echo $dlitelnost; ?>
+                                    </div>
+                                    <div class="grafic-table__column">
+                                       <?php echo $dni_zaezda; ?>
+                                    </div>
+                                    <div class="grafic-table__column">
+                                       <?php echo $primechanie; ?>
+                                    </div>
                                 </div>
-                                <div class="grafic-table__column">
-                                    3 дня
-                                </div>
-                                <div class="grafic-table__column">
-                                    Пятница - Воскресенье
-                                </div>
-                                <div class="grafic-table__column">
-                                    Еженедельно
-                                </div>
-                            </div>
-                            <div class="grafic-table__row">
-                                <div class="grafic-table__column">
-                                    Экспресс
-                                </div>
-                                <div class="grafic-table__column">
-                                    3 дня
-                                </div>
-                                <div class="grafic-table__column">
-                                    Пятница - Воскресенье
-                                </div>
-                                <div class="grafic-table__column">
-                                    Еженедельно
-                                </div>
-                            </div>
-                            <div class="grafic-table__row">
-                                <div class="grafic-table__column">
-                                    Экспресс
-                                </div>
-                                <div class="grafic-table__column">
-                                    3 дня
-                                </div>
-                                <div class="grafic-table__column">
-                                    Пятница - Воскресенье
-                                </div>
-                                <div class="grafic-table__column">
-                                    Еженедельно
-                                </div>
-                            </div>
+                           <?php endwhile; ?>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -436,8 +408,7 @@ Template Post Type:  page
             <div class="container">
                 <div class="contact__wrap">
                     <div class="contact__map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.7779194029954!2d29.771958077151286!3d59.919232974905356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696440e11016503%3A0x7f0503fc1388817e!2z0L3QsNCxLiDQodC40LTQvtGA0L7QstGB0LrQvtCz0L4g0JrQsNC90LDQu9CwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTg0MTI!5e0!3m2!1sru!2sua!4v1707688093320!5m2!1sru!2sua"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <?php the_field('karta', 110); ?>
                     </div>
 
                     <div class="contact__content">
@@ -446,15 +417,15 @@ Template Post Type:  page
                         <ul class="contact-list">
                             <li>
                                 <span>Адрес:</span>
-                                <p>г. Ломоносов, наб.Сидоровского канала, 3</p>
+                                <p> <?php the_field('adress', 110); ?></p>
                             </li>
                             <li>
                                 <span>Телефон:</span>
-                                <a href="">+7 (812) 362-07-07</a>
+                                <a href="tel: <?php the_field('telefon', 110); ?>"> <?php the_field('telefon', 110); ?></a>
                             </li>
                             <li>
                                 <span>E-mail:</span>
-                                <a href=""></a>
+                                <a href="mailto: <?php the_field('e-mail', 110); ?>"> <?php the_field('e-mail', 110); ?></a>
                             </li>
                         </ul>
 
@@ -463,7 +434,7 @@ Template Post Type:  page
 
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href=" <?php the_field('vk', 110); ?>" target="_blank">
                                         <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                        
                                             <defs>
@@ -481,7 +452,7 @@ Template Post Type:  page
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href=" <?php the_field('telegram', 110); ?>" target="_blank">
                                         <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                        
                                             <defs>

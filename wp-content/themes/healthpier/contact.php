@@ -20,11 +20,9 @@ Template Post Type:  page
             <div class="container">
                 <div class="aboutPage__wrap">
                     <div class="aboutPage__block">
-                        <h1 class="h1">Контакты</h1>
+                        <h1 class="h1"><?php the_title();?></h1>
                         <div>
-                            <p>
-                                Мы находимся на южном побережье Финского залива в одном из красивейших мест Ленинградской области - Ораниенбауме. Есть удобная парковка. Недалеко от отеля находится пляж. К вашим услугам большой красивый парк для прогулок.
-                            </p>
+                            <?php the_content();?>
 
                             <button type="button" class=" btn-main openModal">Записаться
 
@@ -38,8 +36,7 @@ Template Post Type:  page
                         </div>
                     </div>
                     <div class="aboutPage__img">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.7779194029954!2d29.771958077151286!3d59.919232974905356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696440e11016503%3A0x7f0503fc1388817e!2z0L3QsNCxLiDQodC40LTQvtGA0L7QstGB0LrQvtCz0L4g0JrQsNC90LDQu9CwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTg0MTI!5e0!3m2!1sru!2sua!4v1707688093320!5m2!1sru!2sua"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         <?php the_field('karta'); ?>
                     </div>
                 </div>
             </div>
@@ -51,21 +48,21 @@ Template Post Type:  page
                 <ul class="contactBlock__list">
                     <li>
                         <span>Адрес:</span>
-                        <p>г. Ломоносов, наб.Сидоровского канала, 3</p>
+                        <p> <?php the_field('adress'); ?></p>
                     </li>
                     <li>
                         <span>Телефон:</span>
-                        <a href="tel:+7 (812) 362-07-07">+7 (812) 362-07-07</a>
+                        <a href="tel: <?php the_field('telefon'); ?>"> <?php the_field('telefon'); ?></a>
                     </li>
                     <li>
                         <span>E-mail:</span>
-                        <a href=""></a>
+                        <a href="mailto: <?php the_field('e-mail'); ?>"> <?php the_field('e-mail'); ?></a>
                     </li>
                 </ul>
 
                 <ul class="contactBlock__social">
                     <li>
-                        <a href="">
+                        <a href=" <?php the_field('vk'); ?>" target="_blank">
                             <svg width="100%" height="100%" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <clipPath id="clip3578_936">
@@ -82,7 +79,7 @@ Template Post Type:  page
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=" <?php the_field('telegram'); ?>" target="_blank">
                             <svg width="100%" height="100%" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <clipPath id="clip3578_940">
