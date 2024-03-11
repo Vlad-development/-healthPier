@@ -95,7 +95,7 @@ if ($post_type === 'program' || $post_type === 'post') { // Если тип за
 ?>
 
 
-            <h1><span style="text-transform: uppercase;"> <?php the_title();?></span>
+            <h1><span style="text-transform: uppercase;display:block;"> <?php the_title();?></span>
             <?php
                 $acf_field = get_field('podzagolovok');
 
