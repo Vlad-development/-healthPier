@@ -39,7 +39,7 @@ Template Post Type:  page
                 );
                 $posts = get_posts( $args );
                 foreach($posts as $post) { setup_postdata($post); ?>
-                    <div class="news-card">
+                    <a href="<?php the_permalink();?>" class="news-card">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="news-card__img">
                         <div class="news-card__block">
                             <h2 class="news-card__title">
@@ -61,7 +61,7 @@ Template Post Type:  page
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 <?php }
                 wp_reset_postdata();          
@@ -92,7 +92,7 @@ Template Post Type:  page
                 );
                 $posts = get_posts( $args );
                 foreach($posts as $post) { setup_postdata($post); ?>
-                    <div class="news-card">
+                    <a  href="<?php the_permalink();?>" class="news-card">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="news-card__img">
                         <div class="news-card__block">
                             <h2 class="news-card__title">
@@ -114,7 +114,7 @@ Template Post Type:  page
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 <?php }
                 wp_reset_postdata();          
