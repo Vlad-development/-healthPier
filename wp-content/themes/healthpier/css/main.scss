@@ -1157,17 +1157,26 @@ img {
     }
     &-block {
         p {
-            color: #235189;
+            color: #283C54;
             font-size: 1.125rem;
             line-height: 140%;
+            strong {
+                font-weight: 500;
+                color: #163152;
+            }
         }
         h1 {
             color: #235189;
             font-family: CranberryJam;
-            font-size: 3.4375rem;
+            font-size: 3rem;
             font-weight: 400;
             margin-bottom: 3.125rem;
             line-height: 130%;
+            max-width: 30.625rem;
+            width: 100%;
+            span {
+                font-size: 4rem;
+            }
         }
         h2 {
             width: max-content;
@@ -1177,6 +1186,11 @@ img {
             }
         }
     }
+}
+
+body .wp-block-image img {
+    height: 33.125rem;
+    object-fit: cover;
 }
 
 .newsContent-elements_one,
