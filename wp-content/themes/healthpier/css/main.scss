@@ -57,7 +57,7 @@ h6 {
     font-family: CranberryJam;
     font-size: 4rem;
     font-weight: 400;
-    line-height: 130%;
+    line-height: 1;
     text-transform: uppercase;
 }
 
@@ -1468,12 +1468,15 @@ body .wp-block-buttons-is-layout-flex {
     &__block {
         max-width: 35.375rem;
         width: 100%;
-        div p {
-            color: rgb(40, 60, 84);
-            font-family: Noto Sans;
-            font-size: 1.25rem;
-            font-weight: 500;
-            line-height: 140%;
+        div {
+            margin-top: 0.8125rem;
+            p {
+                color: rgb(40, 60, 84);
+                font-family: Noto Sans;
+                font-size: 1.25rem;
+                font-weight: 500;
+                line-height: 140%;
+            }
         }
         button {
             margin: 1.25rem auto 0;
