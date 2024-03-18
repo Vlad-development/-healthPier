@@ -99,6 +99,23 @@
             <?php echo do_shortcode('[contact-form-7 id="837c159" title="Модальное Окно"]'); ?>
         </div>
     </div>
+
+
+    <div class="modalThanks">
+        <div class="modalThanks-block">
+            <button type="buttton" class="btn modalThanks-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                    <path d="M7.09668 21.2402L21.012 6.8749" stroke="#009A93" stroke-width="2"/>
+                    <path d="M21.5566 20.8579L7.1913 6.94255" stroke="#009A93" stroke-width="2"/>
+                </svg>
+            </button>
+
+            <div class="modalThanks-text">
+            Спасибо за заявку!
+Мы свяжемся с вами в ближайшее время
+            </div>
+        </div>
+    </div>
 </div><!-- #page -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
