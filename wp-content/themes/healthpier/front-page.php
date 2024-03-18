@@ -318,7 +318,7 @@ Template Post Type:  page
                 <div class="news-wrap">
                     <?php 
                         $args = array(
-                            'numberposts' => 3,
+                            'numberposts' => wp_is_mobile() ? 1 : 3,
                             'orderby'     => 'date',
                             'order'       => 'DESC',
                             'include'     => array(),
