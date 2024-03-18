@@ -70,9 +70,10 @@ h6 {
     line-height: 140%;
     letter-spacing: 0.09rem;
     position: relative;
+    width: max-content;
     &::after {
         content: "";
-        width: 10.75rem;
+        width: 80%;
         height: 0.125rem;
         margin: auto;
         display: block;
@@ -826,6 +827,8 @@ img {
         &__title {
             font-size: 1.85rem;
             line-height: 150%;
+            max-width: 32rem;
+            width: 100%;
             &::after {
                 width: 16.875rem;
                 margin: 0.875rem 0 0;
