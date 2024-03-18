@@ -1755,20 +1755,27 @@ body .wp-block-buttons-is-layout-flex {
     }
     &-block {
         max-width: 37.5rem;
-        padding: 3.6875rem 4.8125rem 1rem;
+        padding: 6.6875rem 3.8125rem;
         width: 100%;
         background: #fff;
         margin: auto;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        &-text {
-            color: rgb(22, 49, 82);
-            font-family: CranberryJam;
-            font-size: 1.5rem;
-            font-weight: 400;
-            text-align: center;
-        }
+    }
+    &-text {
+        color: rgb(22, 49, 82);
+        font-family: CranberryJam;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
     }
 }
 
