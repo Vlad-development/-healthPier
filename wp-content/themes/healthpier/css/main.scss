@@ -1885,3 +1885,7 @@ body .wp-block-buttons-is-layout-flex {
 .newsContent-block .post-title span {
     font-size: 2.8rem;
 }
+
+body .wpcf7 form.sent .wpcf7-response-output {
+    display: none;
+}
