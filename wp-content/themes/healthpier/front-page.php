@@ -203,23 +203,22 @@ Template Post Type:  page
                 </h2>
 
                 <?php
-require_once 'Mobile_Detect.php'; // Подключаем библиотеку Mobile Detect
-$detect = new Mobile_Detect;
-
 $featured_posts = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
 if( $featured_posts ): ?>
    <div class="service__list">
    <?php 
    $block_counter = 1;
    foreach( $featured_posts as $post ): 
-      // Определяем класс блока в зависимости от устройства
-      if ($detect->isMobile()) {
+      // Проверяем, является ли устройство мобильным
+      if (wp_is_mobile()) {
+         // Если мобильное, то определяем классы в соответствии с новой логикой
          $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
       } else {
-         if ($block_counter == 1 || $block_counter % 4 == 2) {
+         // Иначе используем вашу текущую логику для десктопной версии
+         if ($block_counter == 1) {
             $block_class = 'mini';
          } else {
-            $block_class = 'big';
+            $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
          }
       }
       setup_postdata($post); ?>
@@ -235,8 +234,9 @@ if( $featured_posts ): ?>
             </a>
          </div>
       </div>
-      <?php $block_counter++; ?>
-   <?php endforeach; ?>
+      <?php 
+      $block_counter++;
+   endforeach; ?>
    </div>
    <?php 
    wp_reset_postdata(); ?>
