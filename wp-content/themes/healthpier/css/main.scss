@@ -1748,10 +1748,11 @@ body .wp-block-buttons-is-layout-flex {
     &-close {
         background: transparent;
         margin-left: auto;
-        width: max-content;
         position: absolute;
         right: 1rem;
         top: 1rem;
+        width: 1.875rem;
+        height: 1.875rem;
     }
     &-block {
         max-width: 37.5rem;
