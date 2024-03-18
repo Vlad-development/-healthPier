@@ -234,13 +234,19 @@ if ($featured_posts) : ?>
                     </a>
                 </div>
             </div>
-            <?php $block_counter++; ?>
+            <?php 
+            // Увеличиваем счетчик только если устройство не мобильное, чтобы на мобильных устройствах порядок остался прежним
+            if (!$is_mobile) {
+                $block_counter++;
+            }
+            ?>
         <?php endforeach; ?>
     </div>
     <?php
     wp_reset_postdata();
 endif;
 ?>
+
 
 
                 <a href="/proczedury/" class="service__btn btn-more">
