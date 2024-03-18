@@ -50,6 +50,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener('wpcf7mailsent', function(event) {
+    document.querySelector('.modalThanks').classList.add('active');
+
+    setTimeout(function() {
+        document.querySelector('.modalThanks').classList.remove('active');
+    }, 3000);
+}, false);
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var openModal = document.querySelectorAll('.openModal');

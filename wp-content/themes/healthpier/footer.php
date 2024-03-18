@@ -101,7 +101,7 @@
     </div>
 
 
-    <div class="modalThanks active">
+    <div class="modalThanks">
         <div class="modalThanks-block">
             <svg width="100%" height="100%" viewBox="0 0 600 249" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1183 294.688C1003.27 320.164 849.629 334.06 751.067 273.844C652.506 213.628 643.809 167.308 487.27 169.624C330.73 171.94 226.371 222.892 156.798 141.832C87.2246 60.772 119.112 -34.184 -22.9327 -75.872C-164.978 -117.56 -40.326 -263.468 -220.056 -326" stroke="#235189" stroke-opacity="0.5"/>
