@@ -42,6 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+    var mobThanks = document.querySelector('.modalThanks');
+    var mobThanksCloseBtn = document.querySelector('.modalThanks-close');
+
+    mobThanksCloseBtn.addEventListener('click', function() {
+        mobThanks.classList.toggle('active');
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
     var openModal = document.querySelectorAll('.openModal');
     var openModalBtn = document.querySelector('.modalForm');
     var modalBtnCLose = document.querySelector('.modalForm__close');
