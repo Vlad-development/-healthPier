@@ -554,4 +554,14 @@
     .newsContent-block .post-title span {
         font-size: 2rem;
     }
+    .newsContent-block {
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        order: -2;
+    }
+    .newsContent-block p:first-of-type {
+        order: -2;
+    }
 }
