@@ -94,17 +94,18 @@ if ($post_type === 'program' || $post_type === 'post') { // Если тип за
 }
 ?>
 
-
-        <h1><span style="text-transform: uppercase;display:block;"> <?php the_title();?></span>
-            <?php
-                $acf_field = get_field('podzagolovok');
-
-                if ($acf_field) { ?>
-                     <?php the_field('podzagolovok');?>
-                <?php }
-            ?>
-        
-        </h1>
+<?php if (is_singular('post')) : ?>
+    <h1 class="post-title">
+<?php else : ?>
+    <h1>
+<?php endif; ?>
+    <span style="text-transform: uppercase;display:block;"><?php the_title();?></span>
+    <?php
+    $acf_field = get_field('podzagolovok');
+    if ($acf_field) : ?>
+        <?php the_field('podzagolovok');?>
+    <?php endif; ?>
+</h1>
 
         <div class="newsContent-elements_one">
             <svg width="100%" height="100%" viewBox="0 0 1366 789" fill="none" xmlns="http://www.w3.org/2000/svg">
