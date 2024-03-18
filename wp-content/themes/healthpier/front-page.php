@@ -211,8 +211,7 @@ if( $featured_posts ): ?>
    foreach( $featured_posts as $post ): 
       // Проверяем, является ли устройство мобильным
       if (wp_is_mobile()) {
-         // Если мобильное, то определяем классы в соответствии с новой логикой
-         $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
+        $block_class = ($block_counter % 2 == 0) ? 'big' : 'mini';
       } else {
          // Иначе используем вашу текущую логику для десктопной версии
          if ($block_counter == 1) {
