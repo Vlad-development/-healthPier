@@ -203,37 +203,45 @@ Template Post Type:  page
                 </h2>
 
                 <?php
-         $featured_posts = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
-         if( $featured_posts ): ?>
-            <div class="service__list">
-            <?php 
-            $block_counter = 1;
-            foreach( $featured_posts as $post ): 
-               if ($block_counter == 1) {
-                  $block_class = 'mini';
-               } else {
-                  $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
-               }
-                  setup_postdata($post); ?>
-                  <div class="service__item <?= $block_class; ?>">
-                     <div class="service-card">
-                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-
-                        <a href="<?php the_permalink(); ?>" class="service-card__link">
-                              <?php the_title();?>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                 <circle cx="30" cy="30" r="29.5" stroke="#235189" />
-                                 <path d="M17.5864 30H42.414M42.414 30L35.8804 23.7931M42.414 30L35.8804 36.2069" stroke="#235189" />
-                              </svg>
-                        </a>
-                     </div>
-                  </div>
-                  <?php $block_counter++; ?>
-            <?php endforeach; ?>
+$featured_posts = get_field('vyberete_uslugi_kotorye_budut_vyvoditsya_na_sajte');
+if ($featured_posts) : ?>
+    <div class="service__list">
+        <?php
+        $block_counter = 1;
+        $is_mobile = wp_is_mobile(); // Проверяем, является ли текущее устройство мобильным
+        foreach ($featured_posts as $post) :
+            if ($block_counter == 1) {
+                $block_class = 'mini';
+            } else {
+                // Если устройство мобильное, меняем порядок классов
+                if ($is_mobile) {
+                    $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'mini' : 'big';
+                } else {
+                    $block_class = ($block_counter % 4 == 2 || $block_counter % 4 == 3) ? 'big' : 'mini';
+                }
+            }
+            setup_postdata($post);
+            ?>
+            <div class="service__item <?= $block_class; ?>">
+                <div class="service-card">
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                    <a href="<?php the_permalink(); ?>" class="service-card__link">
+                        <?php the_title(); ?>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="29.5" stroke="#235189" />
+                            <path d="M17.5864 30H42.414M42.414 30L35.8804 23.7931M42.414 30L35.8804 36.2069" stroke="#235189" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <?php 
-            wp_reset_postdata(); ?>
-      <?php endif; ?>
+            <?php $block_counter++; ?>
+        <?php endforeach; ?>
+    </div>
+    <?php
+    wp_reset_postdata();
+endif;
+?>
+
 
                 <a href="/proczedury/" class="service__btn btn-more">
                     Смотреть все
