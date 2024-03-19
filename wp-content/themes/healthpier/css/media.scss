@@ -115,6 +115,11 @@
     .newsContent-block h2 {
         font-size: 2rem;
     }
+    .h2::after,
+    .newsContent-block h2::after,
+    .article__title.h2::after {
+        width: 70%
+    }
     .wp-block-heading.has-text-align-center::after {
         margin: auto;
     }
