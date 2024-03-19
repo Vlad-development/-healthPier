@@ -132,7 +132,7 @@ Template Post Type:  page
 
         <section class="program">
             <div class="container">
-                <h2 class="h2 text-center">
+                <h2 class="h2 text-center m-auto">
                     Программы
                 </h2>
 
@@ -198,7 +198,7 @@ Template Post Type:  page
 
         <section class="service">
             <div class="container">
-                <h2 class="h2 text-center">
+                <h2 class="h2 text-center m-auto">
                     Популярные услуги
                 </h2>
 
@@ -318,7 +318,7 @@ if( $featured_posts ): ?>
 
         <section class="news">
             <div class="container">
-                <h2 class="news__title h2">
+                <h2 class="news__title h2 m-auto">
                     Новости
                 </h2>
 
@@ -369,7 +369,7 @@ if( $featured_posts ): ?>
 
         <section class="grafic">
             <div class="container">
-                <h2 class="h2 grafic__title">График заездов</h2>
+                <h2 class="h2 grafic__title m-auto">График заездов</h2>
                <div class="grafic-table-wrap">
                     <div class="grafic-table">
                         <div class="grafic-table__head">
@@ -419,7 +419,7 @@ if( $featured_posts ): ?>
                     </div>
 
                     <div class="contact__content">
-                        <h2 class="h2">Контакты</h2>
+                        <h2 class="h2 m-auto">Контакты</h2>
 
                         <ul class="contact-list">
                             <li>
