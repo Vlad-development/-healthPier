@@ -886,7 +886,6 @@ img {
             line-height: 1rem;
             display: flex;
             align-items: center;
-            margin-left: 0.625rem;
             position: relative;
             &::before {
                 content: '';
@@ -895,8 +894,10 @@ img {
                 border: 0.0625rem solid rgb(22, 49, 82);
                 opacity: 0.15;
                 display: block;
+                margin-right: 0.625rem;
             }
             a {
+                margin-left: 0.25rem;
                 color: rgb(40, 60, 84);
             }
         }
