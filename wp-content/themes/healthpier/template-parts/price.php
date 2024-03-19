@@ -1,6 +1,6 @@
 <section class="prices">
     <div class="container">
-    <h2 class="h2 text-center">Стоимость</h2>
+    <h2 class="h2 text-center m-auto">Стоимость</h2>
 
 <div class="prices__block has-text-align-center has-x-large-font-size">
     <?php the_field('czena'); ?> рублей
