@@ -1136,7 +1136,7 @@ img {
         clear: both;
         float: right;
         width: 14.5rem;
-        margin: 2rem 10.625rem 17rem 5.6875rem;
+        margin: 2rem 10.625rem 0 5.6875rem;
         &__title {
             color: rgb(22, 49, 82);
             font-family: CranberryJam;
@@ -1172,13 +1172,19 @@ img {
                 font-weight: 500;
                 color: #163152;
             }
+            &:first-of-type {
+                height: 10.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
         h1 {
             color: #235189;
             font-family: CranberryJam;
             font-size: 3rem;
             font-weight: 400;
-            margin-bottom: 3.125rem;
             line-height: 130%;
             max-width: 30.625rem;
             width: 100%;
