@@ -19,7 +19,7 @@ Template Post Type:  page
 </section>
 <section class="news">
     <div class="container">
-        <h2 class="news__title h2">
+        <h2 class="news__title h2 m-auto">
             Акции
         </h2>
 
@@ -72,7 +72,7 @@ Template Post Type:  page
 
 <section class="news">
     <div class="container">
-        <h2 class="news__title h2">
+        <h2 class="news__title h2 m-auto">
             Новости
         </h2>
 

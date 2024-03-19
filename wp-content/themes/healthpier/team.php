@@ -18,7 +18,7 @@ Template Post Type:  page
         </section>
         <section class="team">
             <div class="container">
-                <h1 class="team__title h2 text-center">
+                <h1 class="team__title h2 text-center m-auto">
                     Наша команда
                 </h1>
 
