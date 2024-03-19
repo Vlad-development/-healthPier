@@ -868,13 +868,15 @@ img {
                 color: rgb(40, 60, 84);
                 font-size: 1rem;
             }
-            span,
-            & a {
+            span {
                 display: block;
                 color: rgb(40, 60, 84);
                 margin-bottom: 0.25rem;
                 font-size: 1rem;
                 font-weight: 400;
+                a {
+                    color: rgb(40, 60, 84);
+                }
             }
         }
     }
