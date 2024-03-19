@@ -49,7 +49,7 @@ Template Post Type:  page
         
                         <?php foreach( $images as $image ): ?>
                             <a href="<?php echo esc_url($image['url']); ?>">
-                                 <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                 <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             </a>
                         <?php endforeach; ?>
                     <?php endif; ?>
