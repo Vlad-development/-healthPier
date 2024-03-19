@@ -115,9 +115,6 @@
     .newsContent-block h2 {
         font-size: 2rem;
     }
-    .newsContent-block h2:after {
-        width: 14.75rem;
-    }
     .wp-block-heading.has-text-align-center::after {
         margin: auto;
     }
@@ -372,7 +369,6 @@
         flex-direction: column;
     }
     .about__left h2 {
-        width: 11.6875rem;
         text-align: center;
         margin: auto;
     }
@@ -569,5 +565,12 @@
     .contactPage .aboutPage__block div p {
         margin-top: 1rem;
         margin-bottom: 2rem;
+    }
+    .newsContent-block h2 {
+        max-width: 100%;
+        text-align: center;
+    }
+    body .wp-block-image img {
+        height: auto;
     }
 }
