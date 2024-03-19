@@ -7,9 +7,9 @@ Template Post Type:  page
   
    <?php get_header()?>
 
-   <main> 
+   <main style="padding: 4rem 0;"> 
     <div class="container">
-        <h1 class="h1"><?php the_title();?></h1>
+        <h1 class="h2" style="margin-bottom: 4rem;"><?php the_title();?></h1>
 
         <?php the_content();?>
     </div>
