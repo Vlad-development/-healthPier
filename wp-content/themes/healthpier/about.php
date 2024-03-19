@@ -60,7 +60,7 @@ Template Post Type:  page
 
         <section class="licenses">
             <div class="container">
-                <h2 class="licenses__title h2 text-center">Лицензии </h2>
+                <h2 class="licenses__title h2 text-center m-auto">Лицензии </h2>
                 <div class="licenses_grid">
                     <?php while( have_rows('foto') ): the_row(); 
             			$image = get_sub_field('kartinka');
